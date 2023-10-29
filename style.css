@@ -1,5 +1,633 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  @font-face {
+      font-family: Rubik;
+      src: url(Rubik/Rubik-VariableFont_wght.ttf);
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+  }
+
+  html {
+      font-size: 62.5%;
+      height: 100vh;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  button{
+    cursor: pointer;
+    border: none;
+  }
+  header{
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+    overflow: hidden;
+  }
+  .nav{
+    max-width: 111rem;
+    margin: 0 auto;
+    margin-bottom: 11rem;
+  }
+  .nav, .nav__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__links{
+    gap: 4.6rem;
+  }
+  .nav__link{
+    color: #242A45;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7rem; 
+    letter-spacing: 1.5px;
+  }
+  .nav__link:hover{
+    color: #FA5959;
+  }
+  .nav-btn{
+    border-radius: 5px;
+    background: #FA5959;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+    padding: 1rem 3rem;
+    border: 2px solid transparent;
+    color: #FFF;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem; 
+    letter-spacing: 1.5px;
+  }
+  .nav-btn:hover{
+    border: 2px solid #FA5959;
+    background: #FFF;
+    color: #FA5959;
+  }
+  .header-section{
+    max-width: 118rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .left{
+    max-width: 54rem;
+    margin-top: 7rem;
+    margin-bottom: 12.3rem;
+  }
+  .simple{
+    color: #242A45;
+    font-family: Rubik;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.2rem; 
+    letter-spacing: -0.15px;
+  }
+  .header-text{
+    margin-top: 2.4rem;
+    margin-bottom: 3.2rem;
+    color: #242A45;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    max-width: 54rem;   
+    opacity: 0.5;
+  }
+  .btns{
+    display: flex;
+  }
+  .btn{
+    border: 2px solid transparent;
+    padding: 0.8rem 2.2rem;
+    margin-right: 1rem;
+    font-family: Rubik;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.8rem; 
+    letter-spacing: 0.25px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+
+  }
+  .chrome{
+    background: #5267DF;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+
+    color: #FFF;
+  }
+  .chrome:hover{
+    border: 2px solid #5267DF;
+    background: #FFF;
+    padding: 0.8rem 2.2rem;
+    color: #5267DF;
+  }
+  .firefox{
+    background: #F7F7F7;
+    color: #242A45;
+  }
+  .firefox:hover{
+    border: 2px solid #5B6074;
+    background: #FFF;
+    padding: 0.8rem 2.2rem;
+    color: #242A45;
+  }
+  .right{
+    position: relative;
+    margin-right: -13rem;
+  }
+  .komp{
+    max-width: 57.423rem;
+    margin-right: 9.1rem;
+    border-radius: 2.5rem;
+  }
+  .background-img{
+    position: absolute;
+    right: 2rem;
+    top: 13.1rem;
+
+    z-index: -2;
+  }
+  #section--1{
+    max-width: 111rem;
+    margin: 0 auto;
+  }
+  .features{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.2rem;
+    letter-spacing: -0.1px;
+  }
+  .feature-text{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    width: 54rem;
+    margin: 1.6rem auto 7.2rem ;
+    margin-top: 1.6rem;
+  }
+  .top--1{
+    width: 73rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 7.3rem;
+  }
+  .activ{
+    box-shadow: 0 4px  red;
+  }
+  .top--1 div{
+    width: 24.3rem;
+  }
+  .top--1 div .info{
+    cursor: pointer;
+  }
+  .info{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7rem; 
+    letter-spacing: 0.533px;
+    margin-bottom: 2.7rem;
+  }
+  .bottom--1 .img{
+    position: relative;
+  }
+  .tags{
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 14.9rem;
+  }
+  .tag-activ{
+    height: 45rem;
+    display: flex;
+  }
+  .background-img-2{
+    position: absolute;
+    left: -16.9rem;
+    top: 8.2rem;
+    z-index: -2;
+  }
+  .desktop-2{
+    width: 53.6rem;
+  }
+  .tag-h2{
+    margin-top: 5rem;
+    color: #242A45;
+    font-family: Rubik;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.2rem;
+    letter-spacing: -0.1px;
+  }
+  .tag-info{
+    color: #242A45;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    width: 44.5rem;
+    opacity: 0.5;
+    margin: 1.6rem 0 3.2rem 0;
+  }
+  .tag-2 .background-img-2{
+    width: 59rem;
+    height: 40rem;
+  }
+  .tag-3 .background-img-2{
+    width: 57rem;
+    height: 38rem;
+  }
+  .more-info{
+    border-radius: 5px;
+    background: #5267DF;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20);
+
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.8rem;
+    letter-spacing: 0.25px;
+  }
+  #section--2{
+    margin-bottom: 14.9rem;
+  }
+  .download{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.2rem; 
+    letter-spacing: -0.1px;
+  }
+  .download-info{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    margin-top: 1.6rem;
+    opacity: 0.5;
+    width: 54rem;
+    margin: 0 auto;
+  }
+  .download-apps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99.1rem;
+    margin: 0 auto;
+    margin-top: 4.8rem;
+
+  }
+  .firefox-app{
+    margin-top: 5rem;
+  }
+  .opera-app{
+    margin-top: 10rem;
+  }
+  .box{
+    border-radius: 1.5rem;
+    background: #FFF;
+    box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20);
+    width: 28rem;
+    text-align: center;
+    padding: 4.9rem 2.4rem 2.4rem;
+  }
+  .app-name{
+    margin-top: 3.2rem;
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.25px;
+  }
+  .app-info{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    margin-top: 6px;
+    opacity: 0.5;
+    margin-bottom: 3.2rem;
+  }
+  .install-extension{
+    padding: 0.8rem 2.6rem;
+    margin-top: 2.4rem;
+    background: #5267DF;
+    color: #FFF;
+    text-align: center;
+  }
+  .box .install-extension:hover{
+    border: 2px solid #5267DF;
+    background: #FFF;
+    color: #5267DF;
+  }
+  .dotted {
+    border-bottom: 4px dotted #495DCF33;
+    width: 26rem;
+    margin-left: -1.7rem;
+  }
+  #section--3{
+    width: 54rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 14.9rem;
+  }
+  .frequently{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.2rem; 
+    letter-spacing: -0.1px;
+  }
+  .frequently-info{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155.556%; /* 28px */
+    opacity: 0.5;
+    width: 54rem;
+    margin-top: 1.6rem;
+    margin-bottom: 5.6rem;
+  }
+  #section--3 hr{
+    opacity: 0.1477;
+    background: #242A45;
+  }
+  .open-info{
+    display: flex;
+    justify-content: space-between;
+    
+    padding-top: 1.9rem;
+    padding-bottom: 1.3rem;
+  }
+  .open-info i{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding-top: 1.5rem;
+    padding-right: 2.4rem;
+  }
+  .question{
+    color: #242A45;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem; 
+  }
+  .question-info{
+    color: #242A45;
+    font-family: Rubik;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.6rem; 
+    opacity: 0.75;
+    max-width: 54rem;
+    letter-spacing: 0.15px;
+    margin-bottom: 2.9rem;
+    margin-top: 3.2rem;
+    display: none;
+  }
+  .question-info-activ{
+    display: flex ;
+  }
+  .question-btn{
+    margin: 0 auto;
+    margin-top: 5.4rem;
+  }
+  footer{
+    background: #242A45;
+  }
+  .joined{
+    color: #FFF;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4rem; 
+    letter-spacing: 5px;
+  }
+  .what-we-do{
+    color: #FFF;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4rem; 
+    width: 42.3rem;
+    margin: 0 auto;
+    letter-spacing: -0.1px;
+    margin-top: 2.4rem;
+    margin-bottom: 3.6rem;
+  }
+  .email{
+    display: flex;
+    gap: 1.6rem;
+    width: 48rem;
+    margin: 0 auto;
+  }
+  input{
+    border: none;
+    border-radius: 5px;
+    background: #FFF;
+    width: 30rem;
+    height: 4.8rem;
+    flex-shrink: 0;
+    padding: 1rem 2.1rem;
+
+    color: rgba(36, 42, 69, 0.728);
+    font-family: Rubik;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem; 
+    letter-spacing: 0.25px;
+  }
+  .contact-us{
+    background: #FA5959;
+    color: #FFF;
+    font-size: 1.5rem;
+    height: 4.8rem;
+  }
+  .contact-us:hover{
+    border: 2px solid #FA5959;
+    color: #FA5959;
+    background: #FFF;
+  }
+  .footer-section{
+    padding-bottom: 7.4rem;
+    background: #5267DF;
+    padding-top: 5.8rem;
+  }
+  .footer-nav{
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    width: 100%;
+  }
+  footer .nav__link{
+    color: #FFF;
+    text-align: right;
+  }
+  footer .footer-nav-left{
+    display: flex;
+    gap: 65px;
+    justify-content: start;
+  }
+  .footer-nav-left img{
+    color: #fff;
+  }
+  .icons{
+    display: flex;
+    gap: 2rem;
+  }
+  .icons i{
+    cursor: pointer;
+    color: #fff;
+  }
+  .icons i:hover{
+    color: #fa5959;
+  }
+
+  .red{
+    stroke: #FA5959;
+  }
+  .fa-angle-up{
+    display: none;
+  }
+  input{
+    font-size: 1.5rem;
+  }
+  .input{
+    font-size: 1.5rem;
+    position: relative;
+  }
+  .input p{
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.25px;
+    padding: 2px;
+    display: none;
+  }
+  .error{
+    position: absolute;
+    top: 2.5rem;
+    right: 1.4rem;
+    z-index: -2;
+  }
+  .share-img{
+    margin-left: 7rem;
+    width: 48rem;
+    height: 42rem;
+  }
+    
+  @media (max-width:1290px) {
+    html{
+        font-size: 50%;
+    }
+    .container{
+        max-width: 85%;
+        margin: 0 auto 10.9rem ;
+    }
+    .background-img{
+        height: 70%;
+        width: 110%;
+        margin-right: -25%;
+    }
+    .background-img-2{
+        height: 70%;
+        width: 110%;
+        margin-left: -25%;
+    }
+    .tag-3 .background-img-2{
+        height: 90%;
+        width: 110%;
+        margin-right: -25%;
+    }
+    .share-img{
+        margin-left: 30px;
+    }
+    .download-apps{
+        gap: 3rem;
+    }
+    .header-section{
+        gap: 30px;
+        justify-content: space-evenly;
+    }
+  }
+  @media (max-width:1020px) {
+    .header-section .komp{
+        max-width: 50rem;
+    }
+  }
+  @media (max-width:960px) {
+    html{
+        font-size: 45%;
+    }
+  }
+  @media (max-width:870px) {
+    html{
+        font-size: 43%;
+    }
+  }
+/********* mobile *********/
+@media (max-width:840px) {
+    
 }
